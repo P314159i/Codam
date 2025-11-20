@@ -6,7 +6,7 @@
 /*   By: pidi <pidi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 18:27:02 by pidi              #+#    #+#             */
-/*   Updated: 2025/11/20 17:31:59 by pidi             ###   ########.fr       */
+/*   Updated: 2025/11/20 17:44:22 by pidi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*word_alloc(const char *s, int len)
 	return (word);
 }
 
-static void	free_all(char **arr, int n)
+void	free_all(char **arr, int n)
 {
 	int	i;
 
@@ -61,7 +61,7 @@ static void	free_all(char **arr, int n)
 	free(arr);
 }
 
-static int	split_word(char const **s, char c, char **arr, int *idx)
+int	split_word(char const **s, char c, char **arr, int *idx)
 {
 	int	len;
 
