@@ -6,7 +6,7 @@
 /*   By: pidi <pidi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 18:27:02 by pidi              #+#    #+#             */
-/*   Updated: 2025/11/18 17:09:01 by pidi             ###   ########.fr       */
+/*   Updated: 2025/11/20 17:31:59 by pidi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,35 @@ char	*word_alloc(const char *s, int len)
 	return (word);
 }
 
+static void	free_all(char **arr, int n)
+{
+	int	i;
+
+	i = 0;
+	while (i < n)
+		free(arr[i++]);
+	free(arr);
+}
+
+static int	split_word(char const **s, char c, char **arr, int *idx)
+{
+	int	len;
+
+	len = 0;
+	while ((*s)[len] && (*s)[len] != c)
+		len++;
+	arr[*idx] = word_alloc(*s, len);
+	if (!arr[*idx])
+		return (0);
+	(*idx)++;
+	*s += len;
+	return (1);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**ar_split;
 	int		word_idx;
-	int		len;
 
 	word_idx = 0;
 	ar_split = malloc((word_count(s, c) + 1) * sizeof(char *));
@@ -65,12 +89,11 @@ char	**ft_split(char const *s, char c)
 	{
 		if (*s != c)
 		{
-			len = 0;
-			while (*(s + len) && (*(s + len) != c))
-				len++;
-			ar_split[word_idx] = word_alloc (s, len);
-			word_idx++;
-			s = s + len;
+			if (!split_word(&s, c, ar_split, &word_idx))
+			{
+				free_all(ar_split, word_idx);
+				return (0);
+			}
 		}
 		else
 			s++;

@@ -6,7 +6,7 @@
 /*   By: pidi <pidi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 21:01:19 by pidi              #+#    #+#             */
-/*   Updated: 2025/11/18 17:01:18 by pidi             ###   ########.fr       */
+/*   Updated: 2025/11/20 16:16:27 by pidi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 //         printf("memchr found '%c' at position: %ld\n", c, p_std - str);
 //     else
 //         printf("memchr did not find '%c'\n", c);
-
+// //
 //     if (p_ft)
 //         printf("ft_memchr found '%c' at position: %ld\n", c, p_ft - str);
 //     else

@@ -6,7 +6,7 @@
 /*   By: pidi <pidi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 16:36:34 by pidi              #+#    #+#             */
-/*   Updated: 2025/11/18 20:07:58 by pidi             ###   ########.fr       */
+/*   Updated: 2025/11/20 16:16:10 by pidi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *s, int ch, size_t len)
 
 // #include <stdio.h>
 // #include <string.h>
-
+// //
 // int main() {
 //     char str[50] = "whats gonna happen?";
 //     printf("Before: %s\n", str);

@@ -6,7 +6,7 @@
 /*   By: pidi <pidi@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/11 19:20:58 by pidi              #+#    #+#             */
-/*   Updated: 2025/11/18 16:59:26 by pidi             ###   ########.fr       */
+/*   Updated: 2025/11/20 16:16:35 by pidi             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_isprint(int c)
 
 // #include <ctype.h>
 // #include <stdio.h>
-
+// //
 // int main()
 // {
 // 	printf("%d\n", ft_isprint(127));
