@@ -23,7 +23,7 @@ char	*ft_strdup(const char *s)
 		return (sdup);
 	while (*s)
 		*sdup++ = *s++;
-	*sdup++ = '\0';
+	*sdup = '\0';
 	return (i);
 }
 
